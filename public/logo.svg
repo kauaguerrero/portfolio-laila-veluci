@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 200" width="100%" height="100%">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600&amp;family=Lato:wght@300;400&amp;display=swap');
+      .title { font-family: 'Cormorant Garamond', serif; font-size: 42px; fill: #2A2530; font-weight: 600; }
+      .subtitle { font-family: 'Lato', sans-serif; font-size: 13px; fill: #8A7F96; letter-spacing: 5px; text-transform: uppercase; }
+      .accent { fill: #8E5FC4; }
+    </style>
+  </defs>
+
+  <!-- O fundo é 100% transparente pois não há nenhum elemento de preenchimento (rect) no fundo -->
+
+  <!-- Ícone Minimalista (Brilho/Estrela) representando criação criativa -->
+  <g transform="translate(160, 20)">
+    <path class="accent" d="M40 0 C40 18 58 25 70 25 C58 25 40 32 40 50 C40 32 22 25 10 25 C22 25 40 18 40 0 Z"/>
+    <path fill="#EADDF8" d="M40 12 C40 20 48 23 55 25 C48 27 40 30 40 38 C40 30 32 27 25 25 C32 23 40 20 40 12 Z"/>
+  </g>
+
+  <!-- Elementos de Texto -->
+  <text x="200" y="115" class="title" text-anchor="middle">Laila Veluci</text>
+  <text x="200" y="145" class="subtitle" text-anchor="middle">UGC Creator</text>
+
+  <!-- Linha Decorativa -->
+  <line x1="120" y1="165" x2="280" y2="165" stroke="#8E5FC4" stroke-width="1" opacity="0.6" />
+</svg>

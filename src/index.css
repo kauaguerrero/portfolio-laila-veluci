@@ -1,0 +1,83 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Poppins", "Inter", system-ui, sans-serif;
+
+  --color-blush: #e4d4f7;
+  --color-blush-light: #f6f0fd;
+  --color-blush-dark: #b48ee0;
+  --color-ink: #1a1a1a;
+  --color-charcoal: #2b2b2b;
+  --color-cloud: #f7f7f7;
+  --color-mist: #e9e7e8;
+}
+
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-sans);
+  background-color: #ffffff;
+  color: var(--color-charcoal);
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+::selection {
+  background-color: var(--color-blush);
+  color: var(--color-ink);
+}
+
+/* Card fan carousel — sizes match the breakpoints assumed by
+   getHeightMultiplier()/getResponsiveMultiplier() in card-fan-carousel.tsx */
+.fan-layout {
+  position: relative;
+  height: 18rem;
+}
+@media (min-width: 480px) {
+  .fan-layout {
+    height: 21rem;
+  }
+}
+@media (min-width: 640px) {
+  .fan-layout {
+    height: 23rem;
+  }
+}
+@media (min-width: 768px) {
+  .fan-layout {
+    height: 28rem;
+  }
+}
+@media (min-width: 1024px) {
+  .fan-layout {
+    height: 32rem;
+  }
+}
+
+.fan-card {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  /* Centering is done via GSAP's xPercent/yPercent (set alongside x/y in
+     card-fan-carousel.tsx), not the standalone CSS `translate` property —
+     GSAP clears that property the first time it touches `transform` on an
+     element, which silently uncenters anything relying on it. */
+  height: 65%;
+  aspect-ratio: 9 / 16;
+  border-radius: 1.25rem;
+  overflow: hidden;
+  background: var(--color-cloud);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+  will-change: transform;
+  transition: box-shadow 0.3s ease;
+}
+
+.fan-card.is-active {
+  box-shadow:
+    0 0 0 4px var(--color-blush),
+    0 20px 45px rgba(0, 0, 0, 0.28);
+}
