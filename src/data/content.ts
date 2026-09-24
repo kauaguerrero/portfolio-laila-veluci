@@ -12,7 +12,7 @@ export const profile = {
   instagramUrl: "https://instagram.com/lailaveluci",
   tiktok: "@lailaveluci",
   tiktokUrl: "https://tiktok.com/@lailaveluci",
-  email: "contato@lailaveluci.com",
+  email: "lailasperandir@hotmail.com",
 };
 
 export const services = [
